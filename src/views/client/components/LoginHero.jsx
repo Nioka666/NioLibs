@@ -13,33 +13,43 @@ function LoginHero() {
   const handleSignIn = async (e) => {
     e.preventDefault();
 
-    try { 
-      const response = await AuthService.doUserSignIn(email, password);
-      if (response?.status === 200) {
-        setIsSignedIn(true);
-        await toast.promise(
-          new Promise((resolve) => {
-            setTimeout(() => resolve(response), 2000);
-          }),
-          {
-            loading: "Loading...",
-            success: "Sign In Successfully",
-            error: "An error occurred during sign in",
-          }
-        );
-        setTimeout(() => {
-          navigate("/");
-          window.location.reload();
-        }, 1500);
-      } else if (response?.status !== 200) {
-        toast.error("Invalid email or password. Please try again.");
+    const callSignIn = async () => {
+      try {
+        const response = await AuthService.doUserSignIn(email, password);
+        if (response?.status === 200) {
+          setIsSignedIn(true);
+          return response;
+        } else if (response?.status !== 200) {
+          setIsSignedIn(false);
+          throw new Error("Sign In failed");
+        }
+      } catch (error) {
+        setIsSignedIn(false);
+        throw new error();
       }
-    } catch (error) {
-      console.log(error);
+    };
 
-      // Handle the error condition
-      toast.error("An error occurred during sign in");
-    }
+    toast
+      .promise(
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(callSignIn());
+          }, 1500);
+        }),
+        {
+          loading: "Loading...",
+          success: "Sign In Successfully",
+          error: "An error occurred during sign in",
+        }
+      )
+      .then((result) => {
+        if (result) {
+          window.location.reload();
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (

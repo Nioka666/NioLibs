@@ -61,3 +61,25 @@ export const BookSeed = [
     tahun_terbit: 1956,
   },
 ];
+
+export const CategorySeed = [
+  {
+    nama_kategori: "History",
+  },
+  {
+    nama_kategori: "History",
+  },
+  {
+    nama_kategori: "History",
+  },
+  {
+    nama_kategori: "History",
+  },
+];
+
+export const CategoryRelationSeed = [
+  {
+    buku_id: "ObjectID",
+    kategori_id: "ObjectID",
+  },
+];

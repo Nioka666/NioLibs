@@ -1,7 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 function Dashboard() {
   return (
     <>
-      <h1>Admin Dashboard</h1>
+      <div className="container">
+        <Outlet />
+      </div>
     </>
   );
 }

@@ -124,7 +124,6 @@ app.post("/api/admin-sign-in", async (req, res) => {
 
 app.post("/api/user-sign-in", async (req, res) => {
   const { email, password } = req.body;
-  req.session.user = true;
 
   try {
     const user = await UserModel.findOne({
