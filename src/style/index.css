@@ -1,0 +1,849 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+  color: #ffffffde;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+  font-family: "Poppins";
+}
+
+li {
+  list-style: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+nav {
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #00000006;
+}
+
+nav .navbar-brand {
+  cursor: pointer;
+}
+
+/* Add this CSS to hide the dropdown arrow icon */
+.navbar .nav-link::after {
+  content: none !important;
+}
+
+nav form div.nav-item .dropdown-menu a.dropdown-item {
+  font-weight: 600;
+  color: gray;
+  padding: 10px 20px;
+}
+
+nav.navbar button {
+  font-size: 17px;
+  border: none !important;
+  color: #5d5d5d;
+  font-weight: normal;
+}
+
+nav.navbar button i {
+  font-size: 30px;
+  margin-top: 5px;
+  color: #656565;
+  font-weight: bolder;
+}
+
+nav div.container-fluid {
+  padding: 5px 40px;
+}
+
+nav#nav-notif {
+  display: flex;
+  padding: 0 50px;
+  margin: auto 0;
+  justify-content: space-between;
+  margin: auto 0;
+  width: 100%;
+  background-color: #005c00;
+  height: 35px;
+}
+
+body {
+  background-color: #f4f5f7;
+}
+
+main div.niolibs-main {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 20px;
+  padding: 35px 15px;
+}
+
+section.niolibs-sidebar aside {
+  display: grid;
+  position: fixed;
+  justify-content: center;
+  cursor: pointer;
+  gap: 25px;
+  width: 75px;
+  height: fit-content;
+  padding: 15px 0;
+  margin: 130px 0 0 15px;
+  background-color: white;
+  color: #8a8a8a;
+  border-radius: 25px;
+  /* border: 2px solid #e2e2e275; */
+  box-shadow: 2px 5px 0px #e2e2e275;
+  z-index: 3;
+}
+
+/* styles.css */
+
+aside {
+  position: fixed;
+  top: 16%;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+}
+
+aside.show {
+  top: 16%;
+  left: 15px;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+section.niolibs-sidebar aside i {
+  font-size: 25px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+section.content {
+  width: 100%;
+}
+
+div.niolibs-dash {
+  height: auto;
+}
+
+/* Auth Page */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+}
+
+/* Sign Up Page */
+section.sign-in-form {
+  display: grid;
+  margin-top: 45px;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 60px;
+}
+
+section figure img {
+  margin-top: 50px;
+}
+
+section.sign-in-form form {
+  display: grid;
+  gap: 10px;
+  font-size: 17px;
+  color: black;
+}
+
+section.sign-in-form form input[type="text"],
+section.sign-in-form form input[type="email"],
+section.sign-in-form form input[type="password"] {
+  width: 330px;
+  padding: 14px 20px;
+  border-radius: 18px;
+  background-color: white;
+  color: black;
+  border: 2px solid #003c00;
+}
+
+.auth-container button {
+  width: 330px;
+  border: none !important;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 700;
+}
+
+/* End of Auths Page */
+
+/* Hero */
+div.niolibs-hero {
+  margin: 30px 0 0 40px;
+}
+
+/* div.niolibs-hero div.hero-caption {
+  margin-top: 0px;
+} */
+
+div.niolibs-hero h1 {
+  line-height: 115%;
+  font-size: 73px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #005700;
+}
+
+div.niolibs-hero button {
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 11.5px;
+  border: 1px solid #005c00;
+  box-shadow: 0 5px 0px #005c00;
+  transition: all ease-in-out 0.2s;
+}
+
+div.niolibs-hero div.img-container img.niolibs-book-icon {
+  z-index: 2;
+  margin-left: 90px;
+  margin-top: 60px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  transform: scale(1.03) rotate(1deg);
+}
+
+div.niolibs-hero div.img-container {
+  margin-top: -10px;
+  height: 550px;
+}
+
+div.niolibs-hero div.img-container img.niolibs-book-icon:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+div.niolibs-hero div.img-container img.shape {
+  position: relative;
+  width: 900px;
+  transform: rotate(25deg);
+  top: -520px;
+  right: 70px;
+  z-index: 1;
+}
+
+/* Category */
+div.niolibs-category {
+  margin-top: 25px;
+  margin-left: 19px;
+  margin-bottom: 90px;
+}
+
+div.category-card {
+  display: flex;
+  gap: 25px;
+}
+
+div.category-card .cardd {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  border: 3px solid gray;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 2px 5px 0px gray;
+}
+
+div.category-card .cardd i {
+  font-size: 35px;
+  color: gray;
+}
+
+div.category-card .cardd h5 {
+  margin: auto 0;
+}
+
+/* Catalogue */
+div.niolibs-catalogue {
+  display: grid;
+  gap: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 95%;
+  background-color: #f4f5f7;
+  margin: 70px 20px 50px 20px;
+  height: auto;
+  border-radius: 20px;
+  padding: 80px 25px 47px 30px;
+  overflow-x: auto;
+  cursor: grab;
+}
+
+/* div.catalogue-title {
+  margin-right: 20px;
+} */
+
+div.catalogue-title i {
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+div.catalogue-content {
+  display: flex;
+  gap: 22px;
+}
+
+div.niolibs-catalogue:active {
+  cursor: grabbing;
+}
+
+div.niolibs-catalogue::-webkit-scrollbar {
+  display: none;
+}
+
+div.niolibs-catalogue .catalogue-card {
+  display: grid;
+  cursor: grab;
+  background-color: white;
+  justify-content: center;
+  width: 220px;
+  height: auto;
+  padding: 12px 12px 15px 12px;
+  border-radius: 17px;
+  box-shadow: 2px 5px 10px #80808020;
+}
+
+div.catalogue-title h4 {
+  margin: -35px 10px 8px 10px;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+div.niolibs-catalogue .catalogue-card img {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 190px;
+  height: 270px;
+  color: #80808049;
+}
+
+div.niolibs-catalogue .book-excerpt {
+  display: grid;
+  margin-top: 15px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+div.niolibs-catalogue .book-excerpt h6 {
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.niolibs-catalogue .book-excerpt a:hover {
+  text-decoration: underline;
+}
+
+/* SmallCatalogue */
+div.niolibs-small-catalogue {
+  display: flex;
+  gap: 22px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 95%;
+  /* background-color: #f4f5f7; */
+  margin: 70px 20px 50px 20px;
+  height: auto;
+  border-radius: 20px;
+  padding: 30px;
+  overflow-x: auto;
+  cursor: grab; /* Tambahkan cursor grab */
+}
+
+div.niolibs-small-catalogue:active {
+  cursor: grabbing; /* Ganti cursor saat sedang di-click */
+}
+
+div.niolibs-small-catalogue::-webkit-scrollbar {
+  display: none;
+}
+
+div.niolibs-small-catalogue .catalogue-card {
+  display: grid;
+  cursor: grab;
+  background-color: white;
+  justify-content: center;
+  width: 210px;
+  height: auto;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px #80808020;
+}
+
+div.niolibs-small-catalogue .catalogue-card img {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 180px;
+  height: 260px;
+  color: #80808049;
+}
+
+div.niolibs-small-catalogue .book-excerpt {
+  display: grid;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+div.niolibs-small-catalogue .book-excerpt h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.niolibs-small-catalogue .book-excerpt :hover {
+  text-decoration: underline;
+}
+
+div.niolibs-small-catalogue .book-excerpt i {
+  margin: auto 0;
+  font-size: 12px;
+  color: #808080;
+}
+
+/* div.niolibs-catalogue .catalogue-card .title {
+} */
+
+div.container-login-dash {
+  margin: 0 20px;
+}
+
+div.container-login-dash button {
+  padding: 9px 20px;
+  border-radius: 13px;
+}
+
+div.container-login-dash form input[type="checkbox"] {
+  background-color: red;
+}
+
+/* Loaders */
+div.loading-indicator {
+  background-color: #d0d0d091;
+  border-radius: 20px;
+  width: 190px;
+  height: 200px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+div.loading-indicator-text {
+  background-color: #d0d0d091;
+  border-radius: 13px;
+  width: 190px;
+  height: 30px;
+  padding: 0px;
+}
+
+/* Book Detail */
+div.book-detail-container {
+  display: flex;
+  margin-top: 45px;
+  gap: 50px;
+}
+
+div.book-detail-container section.cover-book {
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: -5px 0px 15px #efefef;
+}
+
+div.book-detail-container section.description-book {
+  margin-top: 20px;
+}
+
+div.book-detail-container section.description-book hr {
+  width: 88%;
+}
+
+div.book-detail-container section.description-book .btn-group {
+  margin-top: 35px;
+}
+
+div.book-detail-container section.description-book button {
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 15px;
+  font-size: 18px;
+  border: 1.9999px solid #005c00;
+  box-shadow: 0 4px 0px #005c00;
+  transition: all ease-in-out 0.2s;
+}
+
+div.book-detail-container section.description-book button:hover {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0px #005c00;
+}
+
+div.book-detail-container img {
+  height: 375px;
+  width: 255px;
+  border-radius: 10px;
+}
+
+/* Reviews Section */
+div.niolibs-reviews {
+  margin-top: 70px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+div.niolibs-reviews section.review-header {
+  margin: 10px 0 40px 15px;
+}
+
+div.niolibs-reviews section.review-body {
+  display: grid;
+  gap: 40px;
+}
+
+div.niolibs-reviews section.review-body div.review-row {
+  display: grid;
+  gap: 8px;
+}
+
+div.niolibs-reviews section.review-body div.review-row p {
+  width: 80%;
+  margin: 0 15px;
+}
+
+div.niolibs-reviews h4 {
+  font-weight: 700;
+}
+
+/* Borrowing Form */
+.niolibs-borrowing-container {
+  display: flex;
+  gap: 40px;
+  padding: 10px 0 100px 0;
+}
+
+form.borrowing-form {
+  display: grid;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+section .borrowing-detail {
+  background-color: white;
+  padding: 40px;
+  width: 50%;
+  border-radius: 20px;
+  border: 1.7px solid #005300;
+  box-shadow: 2px 5px 0px #005300;
+}
+
+section .borrowing-detail div.borrowing-inputs input {
+  font-size: 15px;
+}
+
+section .borrowing-detail div.borrowing-inputs input[placeholder] {
+  font-size: 15px;
+}
+
+section.borrowing-detail .btn-group {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+section.borrowing-detail button {
+  background-color: white;
+  padding: 7px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17.5px;
+  color: #003c00;
+  border: 1.9px solid #005c00;
+  box-shadow: 2px 2px 0px #005c00;
+  transition: all ease-in-out 0.2s;
+}
+
+section.borrowing-detail button:hover {
+  transform: translateX(2px);
+  box-shadow: 0px 0px 0px #005c00;
+}
+
+section.borrowing-books {
+  background-color: white;
+  padding: 40px;
+  width: 50%;
+  height: fit-content;
+  border-radius: 20px;
+  border: 2px solid #005300;
+  box-shadow: 2px 5px 0px #005300;
+}
+
+section.borrowing-books img {
+  height: 215px;
+  width: 145px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px #80808020;
+}
+
+div.book-selected {
+  display: flex;
+  gap: 22px;
+  margin-top: 45px;
+}
+
+div.book-selected .descriptions {
+  display: grid;
+  gap: 10px;
+}
+
+div.book-selected .description .row-desc {
+  display: flex;
+  height: 10px;
+}
+
+div.book-selected .description .row-desc h6 {
+  font-weight: 600;
+}
+
+/* Profile Pages */
+div.profile-container {
+  display: grid;
+}
+
+div.profile-container div.user-identity {
+  display: grid;
+  margin-top: -170px;
+  margin-left: 250px;
+}
+
+div.profile-container .bg-profile {
+  display: flex;
+  justify-content: start;
+  height: auto;
+}
+
+div.profile-container .bg-profile img {
+  cursor: pointer;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+div.profile-container .bg-profile img:hover {
+  filter: brightness(85%);
+}
+
+div.profile-container .bg-profile img.avatar-profile {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 50px;
+  height: 29%;
+  width: auto;
+  border: 7px solid white;
+  border-radius: 1000px;
+  transition: all ease-in-out 0.2s;
+}
+
+div.profile-container .bg-profile img.avatar-profile:hover {
+  filter: brightness(85%);
+}
+
+div.profile-container div.profile-body {
+  display: flex;
+  margin-top: -30px;
+  /* border: 2px solid gray; */
+}
+
+div.profile-container div.profile-body section.side-menu {
+  display: grid;
+  width: 25%;
+  /* border: 2px solid gray; */
+}
+
+div.profile-container div.profile-body section.side-menu ul {
+  font-weight: 700;
+  gap: 20px;
+}
+
+div.profile-container div.profile-body section.side-menu ul li {
+  cursor: pointer;
+  height: 60px;
+  font-size: 17.5px;
+}
+
+div.profile-container div.profile-body section.contents {
+  width: 75%;
+  min-height: 350px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  box-sizing: border-box;
+}
+/* End Footer */
+
+/* Error Page */
+div.error-page {
+  display: grid;
+  justify-content: center;
+  margin: auto 0;
+  height: 100vh;
+}
+
+div.error-page .caption {
+  margin: auto 0;
+  font-weight: bold;
+}
+
+div.error-page .caption h1 {
+  font-weight: bold;
+  font-size: 120px;
+}
+
+/* Collections Page  */
+.collection-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  gap: 20px;
+}
+
+.collection-card {
+  display: flex;
+  cursor: pointer;
+  gap: 25px;
+  width: 350px;
+  height: 180px;
+  padding: 25px 20px;
+  /* border: 2px solid gray; */
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px #e5e5e5cd;
+  transition: all ease-in-out 0.2s;
+}
+
+.add-collection-card {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  padding: auto 0;
+  width: 350px;
+  height: 180px;
+  /* border: 2px solid gray; */
+  border-radius: 15px;
+  background-color: #eeeeee;
+  box-shadow: 2px 4px 10px #e5e5e5cd;
+  transition: all ease-in-out 0.2s;
+}
+
+.add-collection-card:hover {
+  background-color: #e2e2e2;
+}
+
+.add-collection-card h1 {
+  margin: auto 0;
+  font-weight: 900;
+  font-size: 60px;
+  color: #979797;
+}
+
+.collection-card:hover {
+  transform: translateY(2px);
+  box-shadow: 3px 6px 12px #e1e1e1;
+}
+
+/* variables */
+.text-darkgrays {
+  color: #353535;
+}
+
+.text-darkgrayy {
+  color: #767676;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.text-lightgray {
+  color: #989898;
+}
+
+.text-lights {
+  color: #dedede;
+}
+
+.text-ijo {
+  color: #005300;
+}
+
+.bg-ijo {
+  background-color: #005300;
+}
+
+.bg-ijo-muda {
+  background-color: #009000;
+}
+
+/* Sizes */
+.fs-33 {
+  font-size: 33px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
